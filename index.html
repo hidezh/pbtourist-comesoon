@@ -14,11 +14,7 @@
 <link type="text/css" rel="stylesheet" href="asset/stylesheets/base.css" />
 <script type="text/javascript" src="asset/javascripts/jquery.js"></script>
 <script type="text/javascript" src="asset/javascripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="asset/javascripts/holder.js"></script>
 
-<style type="text/css">
-
-</style>
 </head>
 <body>
 	<div class="container">
@@ -43,18 +39,62 @@
 	    	<button class="sbtn"></button>
 	    </div>
 
-		<div class="social-share-button" data-url="" data-img="" data-title="定制你的旅行梦想，保存你的光辉记忆|朋贝旅行俱乐部PBtourist">
+		<div class="social-share-button" data-url="http://www.pbtourist.com" data-img="http://42.96.146.235/asset/images/slider01.jpg" data-title="定制你的旅行梦想，保存你的光辉记忆|朋贝旅行俱乐部PBtourist">
 			<a class="social-share-button-twitter" title="分享到Twitter" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="twitter" href="#"></a>
 			<a class="social-share-button-facebook" title="分享到Facebook" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="facebook" href="#"></a>
 			<a class="social-share-button-google_plus" title="分享到Google+" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="google_plus" href="#"></a>
 			<a class="social-share-button-weibo" title="分享到新浪微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="weibo" href="#"></a>
 			<a class="social-share-button-tqq" title="分享到腾讯微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="tqq" href="#"></a>
 		</div>
+		<div class="alert alert-error" style="display:none;background-color:#eee;border-color:#ccc;position:absolute;width:600px;height:20px;top:420px;left:138px;">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<strong cless="err">Error!</strong> 
+		</div>
 	</div>
 
+    <div class="modal hide fade" id="myModal">
+	    <div class="modal-header">
+	   	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    <h3>PBTOURIST</h3>
+	    </div>
+	    <div class="modal-body">
+	    <p>congratulations, sending successful !</p>
+	    </div>
+    </div>
+
+
 <script type="text/javascript">
-	setInterval(function(){$("#myCarousel").find("a.right").click();},4000)
-	
+jQuery(function($){
+	setInterval(function(){$("#myCarousel").find("a.right").click();},5000)
+	$("button.sbtn").click(function(){
+		var username = $("input.username").val();
+		var email = $("input.email").val();
+		$('.sbtn').hide();
+		$('input.email').after('<span class="sbtm-tip" style="color:grey;font-weight:bold;display:inline-block;margin-left:-20px;">NOW SENDING ...</span>');
+		$.ajax({
+				type          : 'get',
+				scriptCharset : 'utf-8',
+				url           : 'http://42.96.146.235:3000/api/come_soon_submit?username=' + username + '&email=' + email,
+				dataType      : 'jsonp',
+				jsonp         : 'callback',
+				success       : function(data) {
+					$('.sbtm-tip').remove();
+					$('.sbtn').show();
+					var tip;
+					if(data[0].code == "1"){
+						$('.alert-error').remove();
+						$('.modal').modal('show');
+					}else{
+						$('.errtip').remove();
+						$('.alert-error').append("<span class='errtip'>" + data[0].err + "</span>").fadeIn();
+					}
+					//console.log(data);
+					//alert(data[0].name);
+				}
+			});
+	})
+
+
 	window.SocialShareButton = {
 	  openUrl: function(url) {
 	    window.open(url);
@@ -71,18 +111,15 @@
 	    }
 	    switch (site) {
 	      case "weibo":
-	      	alert(title);
 	        SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=" + url + "&type=3&pic=" + img + "&title=" + title);
 	        break;
 	      case "twitter":
-	      	alert(title);
 	        SocialShareButton.openUrl("https://twitter.com/home?status=" + title + ": " + url);
 	        break;
 	      case "douban":
 	        SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=" + url + "&name=" + title + "&image=" + img);
 	        break;
 	      case "facebook":
-	      	alert(title);
 	        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?t=" + title + "&u=" + url);
 	        break;
 	      case "qq":
@@ -101,7 +138,6 @@
 	        SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=" + url + "&title=" + title + "&description=");
 	        break;
 	      case "google_plus":
-	      	alert(title);
 	        SocialShareButton.openUrl("https://plus.google.com/share?url=" + url + "&t=" + title);
 	        break;
 	      case "google_bookmark":
@@ -113,6 +149,8 @@
 	    return false;
 	  }
 	};
+})
+
 </script>
 </body>
 </html>
