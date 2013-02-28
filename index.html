@@ -34,8 +34,8 @@
 
 
 	    <div id="comesoon-submit">
-	    	<input class="sbtarea username" type = "text" style="" />
-	    	<input class="sbtarea email" type = "text" />
+	    	<input class="sbtarea username" type = "text" placeholder="username" />
+	    	<input class="sbtarea email" type = "text" placeholder="email"/>
 	    	<button class="sbtn"></button>
 	    </div>
 
@@ -47,7 +47,7 @@
 			<a class="social-share-button-tqq" title="分享到腾讯微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="tqq" href="#"></a>
 		</div>
 		<div class="alert alert-error" style="display:none;background-color:#eee;border-color:#ccc;position:absolute;width:600px;height:20px;top:420px;left:138px;">
-			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
 			<strong cless="err">Error!</strong> 
 		</div>
 	</div>
@@ -66,6 +66,8 @@
 <script type="text/javascript">
 jQuery(function($){
 	setInterval(function(){$("#myCarousel").find("a.right").click();},5000)
+	$("input.email,input.username").focus(function(){$('.alert-error').fadeOut();})
+
 	$("button.sbtn").click(function(){
 		var username = $("input.username").val();
 		var email = $("input.email").val();
@@ -73,8 +75,8 @@ jQuery(function($){
 		$('input.email').after('<span class="sbtm-tip" style="color:grey;font-weight:bold;display:inline-block;margin-left:-20px;">NOW SENDING ...</span>');
 		$.ajax({
 				type          : 'get',
-				scriptCharset : 'utf-8',
-				url           : 'http://42.96.146.235:3000/api/come_soon_submit?username=' + username + '&email=' + email,
+				scriptCharset : 'utf-8', //42.96.146.235:3000
+				url           : 'http://192.168.86.128:3000/api/come_soon_submit?username=' + username + '&email=' + email,
 				dataType      : 'jsonp',
 				jsonp         : 'callback',
 				success       : function(data) {
