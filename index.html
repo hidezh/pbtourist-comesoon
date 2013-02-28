@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="旅游 旅行 定制旅游 tourist" />
+<meta name="description" content="旅游在线定制" />
+<meta name="author" content="tourist" />
+<title>TOURIST COMESOON</title>
+<link rel="icon" href="asset/ico/favicon.ico"/>
+<link type="text/css" rel="stylesheet" href="asset/stylesheets/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="asset/stylesheets/bootstrap-responsive.css" />
+<link type="text/css" rel="stylesheet" href="asset/stylesheets/base.css" />
+<script type="text/javascript" src="asset/javascripts/jquery.js"></script>
+<script type="text/javascript" src="asset/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="asset/javascripts/holder.js"></script>
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div id="myCarousel" class="carousel slide">
+		    <!-- Carousel items -->
+		    <div class="carousel-inner">
+				<div class="active item"><img alt="" src="asset/images/slider01.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider02.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider03.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider04.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider05.jpg" /></div>
+		    </div>
+		    <!-- Carousel nav -->
+		    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	    </div>
+
+
+	    <div id="comesoon-submit">
+	    	<input class="sbtarea username" type = "text" style="" />
+	    	<input class="sbtarea email" type = "text" />
+	    	<button class="sbtn"></button>
+	    </div>
+
+		<div class="social-share-button" data-url="" data-img="" data-title="定制你的旅行梦想，保存你的光辉记忆|朋贝旅行俱乐部PBtourist">
+			<a class="social-share-button-twitter" title="分享到Twitter" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="twitter" href="#"></a>
+			<a class="social-share-button-facebook" title="分享到Facebook" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="facebook" href="#"></a>
+			<a class="social-share-button-google_plus" title="分享到Google+" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="google_plus" href="#"></a>
+			<a class="social-share-button-weibo" title="分享到新浪微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="weibo" href="#"></a>
+			<a class="social-share-button-tqq" title="分享到腾讯微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="tqq" href="#"></a>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	setInterval(function(){$("#myCarousel").find("a.right").click();},4000)
+	
+	window.SocialShareButton = {
+	  openUrl: function(url) {
+	    window.open(url);
+	    return false;
+	  },
+	  share: function(el) {
+	    var img, site, title, url;
+	    site = $(el).data('site');
+	    title = encodeURIComponent($(el).parent().data('title'));
+	    img = encodeURIComponent($(el).parent().data("img"));
+	    url = encodeURIComponent($(el).parent().data("url"));
+	    if (url.length === 0) {
+	      url = encodeURIComponent(location.href);
+	    }
+	    switch (site) {
+	      case "weibo":
+	      	alert(title);
+	        SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=" + url + "&type=3&pic=" + img + "&title=" + title);
+	        break;
+	      case "twitter":
+	      	alert(title);
+	        SocialShareButton.openUrl("https://twitter.com/home?status=" + title + ": " + url);
+	        break;
+	      case "douban":
+	        SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=" + url + "&name=" + title + "&image=" + img);
+	        break;
+	      case "facebook":
+	      	alert(title);
+	        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?t=" + title + "&u=" + url);
+	        break;
+	      case "qq":
+	        SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "&pics=" + img);
+	        break;
+	      case "tqq":
+	        SocialShareButton.openUrl("http://share.v.t.qq.com/index.php?c=share&a=index&url=" + url + "&title=" + title + "&pic=" + img);
+	        break;
+	      case "baidu":
+	        SocialShareButton.openUrl("http://hi.baidu.com/pub/show/share?url=" + url + "&title=" + title + "&content=");
+	        break;
+	      case "kaixin001":
+	        SocialShareButton.openUrl("http://www.kaixin001.com/rest/records.php?url=" + url + "&content=" + title + "&style=11&pic=" + img);
+	        break;
+	      case "renren":
+	        SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=" + url + "&title=" + title + "&description=");
+	        break;
+	      case "google_plus":
+	      	alert(title);
+	        SocialShareButton.openUrl("https://plus.google.com/share?url=" + url + "&t=" + title);
+	        break;
+	      case "google_bookmark":
+	        SocialShareButton.openUrl("https://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=" + url + "&title=" + title);
+	        break;
+	      case "delicious":
+	        SocialShareButton.openUrl("http://www.delicious.com/save?url=" + url + "&title=" + title + "&jump=yes&pic=" + img);
+	    }
+	    return false;
+	  }
+	};
+</script>
+</body>
+</html>
