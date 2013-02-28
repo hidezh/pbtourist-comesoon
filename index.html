@@ -18,6 +18,9 @@
 </head>
 <body>
 	<div class="container">
+		<div id="belttipr"><img src="asset/images/belttip-r.png" /></div>
+		<div id="belttipl"><img src="asset/images/belttip-l.png" /></div>
+
 		<div id="myCarousel" class="carousel slide">
 		    <!-- Carousel items -->
 		    <div class="carousel-inner">
@@ -32,7 +35,6 @@
 		    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 	    </div>
 
-
 	    <div id="comesoon-submit">
 	    	<input class="sbtarea username" type = "text" placeholder="username" />
 	    	<input class="sbtarea email" type = "text" placeholder="email"/>
@@ -46,7 +48,7 @@
 			<a class="social-share-button-weibo" title="分享到新浪微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="weibo" href="#"></a>
 			<a class="social-share-button-tqq" title="分享到腾讯微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="tqq" href="#"></a>
 		</div>
-		<div class="alert alert-error" style="display:none;background-color:#eee;border-color:#ccc;position:absolute;width:600px;height:20px;top:420px;left:138px;">
+		<div class="alert alert-error">
 			<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
 			<strong cless="err">Error!</strong> 
 		</div>
@@ -73,27 +75,40 @@ jQuery(function($){
 		var email = $("input.email").val();
 		$('.sbtn').hide();
 		$('input.email').after('<span class="sbtm-tip" style="color:grey;font-weight:bold;display:inline-block;margin-left:-20px;">NOW SENDING ...</span>');
-		$.ajax({
-				type          : 'get',
-				scriptCharset : 'utf-8', //42.96.146.235:3000
-				url           : 'http://192.168.86.128:3000/api/come_soon_submit?username=' + username + '&email=' + email,
-				dataType      : 'jsonp',
-				jsonp         : 'callback',
-				success       : function(data) {
-					$('.sbtm-tip').remove();
-					$('.sbtn').show();
-					var tip;
-					if(data[0].code == "1"){
-						$('.alert-error').remove();
-						$('.modal').modal('show');
-					}else{
-						$('.errtip').remove();
-						$('.alert-error').append("<span class='errtip'>" + data[0].err + "</span>").fadeIn();
-					}
-					//console.log(data);
-					//alert(data[0].name);
-				}
-			});
+
+		$.getJSON('http://42.96.146.235:3000/api/come_soon_submit?callback=?&username=' + username + '&email=' + email,function(data){
+			$('.sbtm-tip').remove();
+			$('.sbtn').show();
+			var tip;
+			if(data[0].code == "1"){
+				$('.alert-error').remove();
+				$('.modal').modal('show');
+			}else{
+				$('.errtip').remove();
+				$('.alert-error').append("<span class='errtip'>" + data[0].err + "</span>").fadeIn();
+			}
+		})
+		// $.ajax({
+		// 		type          : 'get',
+		// 		scriptCharset : 'utf-8', //42.96.146.235:3000
+		// 		url           : 'http://192.168.86.128:3000/api/come_soon_submit?username=' + username + '&email=' + email,
+		// 		dataType      : 'jsonp',
+		// 		jsonp         : 'callback',
+		// 		success       : function(data) {
+		// 			$('.sbtm-tip').remove();
+		// 			$('.sbtn').show();
+		// 			var tip;
+		// 			if(data[0].code == "1"){
+		// 				$('.alert-error').remove();
+		// 				$('.modal').modal('show');
+		// 			}else{
+		// 				$('.errtip').remove();
+		// 				$('.alert-error').append("<span class='errtip'>" + data[0].err + "</span>").fadeIn();
+		// 			}
+		// 			//console.log(data);
+		// 			//alert(data[0].name);
+		// 		}
+		// 	});
 	})
 
 

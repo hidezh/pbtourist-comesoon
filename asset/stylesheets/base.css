@@ -46,3 +46,6 @@ strong{font-weight:normal;}
 #comesoon-submit{position:absolute;top:479px;left:378px;}
 #comesoon-submit .sbtarea{background:none;border:0px;color:none;box-shadow:none;display:inline-block;width:110px;margin-right:68px;font-size:14px;color:#999;font-weight:bold;}
 #comesoon-submit .sbtn{background:url(../images/sbtn.jpg) no-repeat;width:64px;height:32px;border:0px;display:inline-block;margin-top:-14px;margin-left:-21px;}
+.alert-error{display:none;background-color:#eee;border-color:#ccc;position:absolute;width:600px;height:20px;top:420px;left:138px;}
+#belttipl{position:absolute;top:4px;left:7px;width:228px;height:196px;z-index:100;}
+#belttipr{position:absolute;top:252px;left:763px;width:212px;height:215;z-index:100;}
