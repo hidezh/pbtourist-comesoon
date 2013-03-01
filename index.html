@@ -52,6 +52,17 @@
 			<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
 			<strong cless="err">Error!</strong> 
 		</div>
+
+		<div id="mask"></div>
+		<div class="alert alert-block ie6-alert">
+		  <h2 style="text-align:center;color:black;">PBTOURIST</h2>
+		  <h3 style="color:grey">Your browser is ie6 and not supported, please update your ie to version 7 at least or use one of the following browsers:</h3>
+		  <a href="http://www.google.com/chrome"><img src="asset/images/chrome-logo.gif" /></a>&nbsp&nbsp&nbsp
+		  <a href="http://www.google.com/chrome"><img src="asset/images/firefox-logo.png" /></a>&nbskp&nbsp&nbsp
+		  <a href="http://www.google.com/chrome"><img src="asset/images/opera-logo.png" /></a>
+		  <br />
+		</div>
+
 	</div>
 
     <div class="modal hide fade" id="myModal">
@@ -66,7 +77,19 @@
 
 
 <script type="text/javascript">
+var browser=$.browser;
+var browserVer=browser.version;
+var isIE=browser.msie;
+var isMozilla=browser.mozilla;
+var isIE6=isIE&&browserVer<7;
+var agent=navigator.userAgent.toLowerCase();
+var bMobile=agent.indexOf('mobile')>-1,bIOS=/\b(iphone|ipad)\b/i.test(agent);
+
 jQuery(function($){
+	if(isIE6){
+		$("#mask").show(); $(".ie6-alert").show();
+	}
+
 	setInterval(function(){$("#myCarousel").find("a.right").click();},5000)
 	$("input.email,input.username").focus(function(){$('.alert-error').fadeOut();})
 
@@ -81,34 +104,16 @@ jQuery(function($){
 			$('.sbtn').show();
 			var tip;
 			if(data[0].code == "1"){
-				$('.alert-error').remove();
+				$('.errtip').remove()
+				$('.alert-error').fadeOut();
+				$("input.email").val("");
+				$("input.username").val("");
 				$('.modal').modal('show');
 			}else{
 				$('.errtip').remove();
 				$('.alert-error').append("<span class='errtip'>" + data[0].err + "</span>").fadeIn();
 			}
 		})
-		// $.ajax({
-		// 		type          : 'get',
-		// 		scriptCharset : 'utf-8', //42.96.146.235:3000
-		// 		url           : 'http://192.168.86.128:3000/api/come_soon_submit?username=' + username + '&email=' + email,
-		// 		dataType      : 'jsonp',
-		// 		jsonp         : 'callback',
-		// 		success       : function(data) {
-		// 			$('.sbtm-tip').remove();
-		// 			$('.sbtn').show();
-		// 			var tip;
-		// 			if(data[0].code == "1"){
-		// 				$('.alert-error').remove();
-		// 				$('.modal').modal('show');
-		// 			}else{
-		// 				$('.errtip').remove();
-		// 				$('.alert-error').append("<span class='errtip'>" + data[0].err + "</span>").fadeIn();
-		// 			}
-		// 			//console.log(data);
-		// 			//alert(data[0].name);
-		// 		}
-		// 	});
 	})
 
 
