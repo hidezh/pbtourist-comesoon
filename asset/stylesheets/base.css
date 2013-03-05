@@ -1,4 +1,4 @@
-body{font:12px/1.6 Arial, Helvetica, sans-serif, '宋体';}
+body{font:12px/1.6 Arial, Helvetica, sans-serif, '微软雅黑','宋体','黑体';}
 body, textarea, div, dl, dd{margin:0; padding:0;}
 input,button,select,textarea{outline:none;}
 textarea{resize:none;}
@@ -34,18 +34,12 @@ strong{font-weight:normal;}
 .check{*margin-top:-2px;}
 .box-to .menu{padding-top:4px;}
 
-.container{background:url(../images/back.png) no-repeat;width:980px;height:850px;margin:0 auto;margin-top:16px;position:relative;}
+.container{background:url(../images/backn.png) no-repeat;width:980px;height:850px;margin:0 auto;margin-top:16px;position:relative;}
 #myCarousel{position:absolute;top:103px;left:106px;width:769px;height:270px;}
-.social-share-button{position:absolute;top:611px;left:86px;}
-.carousel-control{display:none;}
-.social-share-button-twitter{display:inline-block;background:url(../images/share.jpg) no-repeat 100% 0px;width:22px;height:21px;}
-.social-share-button-facebook{display:inline-block;background:url(../images/share.jpg) no-repeat 100% -21px;width:22px;height:21px;margin-left:13px;}
-.social-share-button-google_plus{display:inline-block;background:url(../images/share.jpg) no-repeat 100% -42px;width:22px;height:21px;margin-left:13px;}
-.social-share-button-weibo{display:block;background:url(../images/share.jpg) no-repeat 100% -63px;width:22px;height:21px;margin-top:6px;}
-.social-share-button-tqq{display:block;background:url(../images/share.jpg) no-repeat 100% -83px;width:22px;height:21px;margin-top:-21px;margin-left:37px;}
-#comesoon-submit{position:absolute;top:479px;left:378px;}
-#comesoon-submit .sbtarea{background:none;border:0px;color:none;box-shadow:none;display:inline-block;width:110px;margin-right:68px;font-size:14px;color:#999;font-weight:bold;}
-#comesoon-submit .sbtn{background:url(../images/sbtn.jpg) no-repeat;width:64px;height:32px;border:0px;display:inline-block;margin-top:-14px;margin-left:-21px;}
+
+/*#comesoon-submit{position:absolute;top:479px;left:378px;}
+#comesoon-submit .sbtarea{background:none;border:0px;color:none;box-shadow:none;display:inline-block;width:110px;margin-right:68px;font-size:14px;color:#999;font-weight:bold;}*/
+/*#comesoon-submit .sbtn{;width:64px;height:32px;border:0px;display:inline-block;margin-top:-14px;margin-left:-21px;}*/
 .alert-error{display:none;background-color:#eee;border-color:#ccc;position:absolute;width:600px;height:20px;top:420px;left:138px;}
 #belttipl{position:absolute;top:4px;left:7px;width:228px;height:196px;z-index:100;}
 #belttipr{position:absolute;top:252px;left:763px;width:212px;height:215;z-index:100;}
