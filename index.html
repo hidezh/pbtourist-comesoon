@@ -25,22 +25,22 @@
 	#myCarousel{position:absolute;top:103px;left:106px;width:769px;height:270px;}
 	.alert-error{display:none;background-color:#eee;border-color:#a00;position:absolute;width:680px;height:20px;top:420px;left:120px;z-index:1000;}
 	#belttipl{position:absolute;top:4px;left:7px;width:228px;height:196px;z-index:100;}
-	#belttipr{position:absolute;top:252px;left:763px;width:212px;height:215;z-index:100;}
+	#belttipr{position:absolute;top:332px;left:763px;width:212px;height:215;z-index:100;}
 	.ie6-alert{display:none;position:absolute;top:-30px;width:560px;padding:48px;;z-index:500;background-color:white;border-color:#eee;left:170px;top:120px;border-radius:12px;}
 	#mask{display:none;position:absolute;top:0px;left:0px;width:100%;height:100%;background-color:#000;z-index:400;opacity:0.4;filter:alpha(opacity=40)}
 
 
-	.title { background: url(asset/images/pb.jpg) no-repeat scroll top left; height:50px; padding: 20px 69px; font: italic 30px/30px Cambria,Arial; color:rgb(153,153,153); margin-top:30px; margin-left:632px; word-spacing: 7px; }
+	.title { background: url(asset/images/pb.png) no-repeat scroll top left; height:50px; padding: 20px 69px; font: italic 30px/30px Cambria,Arial; color:rgb(153,153,153); margin-top:30px; margin-left:594px; word-spacing: 7px; }
 	ul.list { list-style: none; display:block; clear:both; margin-left:85px;margin-top:459px;*margin-top:340px;overflow: hidden;}
 	ul.list>li { display: inline-block; *display:inline; zoom:1; position:relative;}
-	li.desc>h2 { font: bold italic 18px/18px '微软雅黑';color:#909090; }
-	li.desc>h4 { font: bold italic 11px/12px Constantia,Arial ;color:#909090;}
+	li.desc>h2 { font: bold 14px/18px '微软雅黑';color:#666; }
+	li.desc>h4 { font: bold italic 12px/12px Constantia,Arial ;color:#909090;}
 
 	li.un { margin-left:20px; background: url(asset/images/un.png) no-repeat top left; width:172px;height:33px;overflow:hidden;zoom:1;}
 	li.email { margin-left:14px; background: url(asset/images/email.png) no-repeat top left; width:192px;height:33px; overflow:hidden;zoom:1;}
 	li.sbt { margin-left:14px; background:url(asset/images/sbtn-c.jpg) no-repeat top left; width:64px; height:32px; }
 	li.sbt:hover { background:url(asset/images/sbtn-c.jpg) no-repeat 0 -32px; cursor:pointer}
-	li.un>input,li.email>input {display:block;background:none;border:0px;color:none;box-shadow:none;width:110px;margin-left:40px; margin-top:4px;font-size:14px;color:#999;font-weight:bold; position: absolute; top:0;left:0;}
+	li.un>input,li.email>input {display:block;background:none;border:0px;color:none;box-shadow:none;width:110px;margin-left:40px; margin-top:3px;font-size:14px;color:#999;font-weight:bold; position: absolute; top:0;left:0;}
 	li.email>input { margin-left:45px ; width:126px; }
 	li.un ,li.email,li.sbt {*padding-bottom:10px;}
 	li.sbt {*height:22px;margin-bottom: 1px;*margin-bottom:14px;}
@@ -51,34 +51,44 @@
 	.side {float:left; width:103px;margin-left:112px;}
 	.content {float:left; width:670px;}
 	.side .t1 { font: 20px/20px "微软雅黑"; color:#666;}
-	.side .t2 { font: italic 20px/20px Cambria,Arial; color:#666; text-indent: -29px; letter-spacing: 1px;margin-top:-11px;}
+	.side .t2 { font: italic 20px/20px Cambria,Arial; color:#666; text-indent: -29px; letter-spacing: 1px;margin-top:-11px; *line-height:38px; *margin-top:-18px; }
 	.side .t2:first-letter { font-size:50px; }
 	
-	.social-share-button { margin:16px -32px;}
-	.social-share-button-twitter{display:inline-block;background:url(asset/images/share.jpg) no-repeat 100% 0px;width:22px;height:21px;}
-	.social-share-button-facebook{display:inline-block;background:url(asset/images/share.jpg) no-repeat 100% -21px;width:22px;height:21px;margin-left:13px;}
-	.social-share-button-google_plus{display:inline-block;background:url(asset/images/share.jpg) no-repeat 100% -42px;width:22px;height:21px;margin-left:13px;}
-	.social-share-button-weibo{display:block;background:url(asset/images/share.jpg) no-repeat 100% -63px;width:22px;height:21px;margin-top:6px;}
-	.social-share-button-tqq{display:block;background:url(asset/images/share.jpg) no-repeat 100% -83px;width:22px;height:21px;margin-top:-21px;margin-left:37px;}
+	.social-share-button { margin:16px -32px; margin-left: 13px;}
+	.icon { display:inline-block;width:61px;height:21px; background:url(asset/images/sns.gif) no-repeat ; margin-left:13px; }
+	.msg { 
+		display:inline-block; background:url(asset/images/msg.png) no-repeat top left;
+	    font:bold 12px/25px Arial; color:grey; width:31px;height:22px;text-align: center;  overflow: hidden;
+	    *margin-left:3px; vertical-align:top; 
+	 }
+	a.msg:hover { color:grey ; text-decoration: none }
 
+	.social-share-button-twitter     { background-position:  0 -42px;}
+	.social-share-button-facebook    { background-position:  0 -21px;}
+	.social-share-button-google_plus { background-position:  0 0px; margin-left:-15px;}
+	.social-share-button-weibo       { background-position:  0 -63px;}
+	.social-share-button-tqq         { background-position:  0 -84px;}
+	.mail-to-us                      { background-position:  0 -105px; }
 	.content {}
 	.content>p.cn { font: 12px/20px "幼圆","微软雅黑"; color:#666; word-spacing: 1px; letter-spacing: 1px;}
-	.content>p.en { font: italic 12px/1.7em Arial,Verdana,"Century Gothic",Helvetica,Arial; color:#555; word-break:break-all; word-wrap:break-word;word-spacing: 1px; *word-spacing: 0px;}
+	.content>p.en { font: italic 14px/1.7em Georgia,Arial,Verdana,"Century Gothic",Helvetica,Arial; color:#555; word-break:break-all; word-wrap:break-word;word-spacing: 1px; *word-spacing: 0px; padding-bottom:16px;border-bottom:1px solid #aaa;}
 	.content>p.en b { color:#333; }
 
+	.footer {  margin:0 auto; text-align: center; margin-top:-10px; overflow: hidden;}
+	.footer ul { list-style-type: none; }
+	.footer ul>li { display: inline-block; *display:inline; overflow: hidden; }
+	li.phone {margin-bottom:4px;}
+	li.number { font: bold 18px/24px Arial; color:grey; margin-bottom:2px; padding-left:8px;}
 </style>
 
 </head>
 <body>
 	<div class="container">
-
-
-		<div class="title">COMING SOON</div>
-
+		<div class="title">IS COMING SOON</div>
 		<ul class="list">
 			<li class="desc">
-				<h2>让我们携手共同迎接美好风景</h2>
-				<h4>Let us work together to meet a better Sunrise</h4>
+				<h2>水清沙幼，椰林树影, 现在就启程吧！</h2>
+				<h4>Your next vacation is waiting for you</h4>
 			</li>
 			<li class="un"><input name="username" type = "text" placeholder="NAME | 姓名" /></li>
 			<li class="email"><input name="email" type = "text" placeholder="EMAIL | 电邮" /></li>
@@ -91,43 +101,70 @@
 					<div class="t1">朋贝故事</div>
 					<div class="t2">About P.B</div>
 				</div>
-				<div class="social-share-button" data-url="http://www.pbtourist.com" data-img="http://42.96.146.235/asset/images/slider01.jpg" data-title="定制你的旅行梦想，保存你的光辉记忆|朋贝旅行俱乐部PBtourist">
-					<a class="social-share-button-twitter" title="分享到Facebook" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="facebook" href="#"></a>
-					<a class="social-share-button-facebook" title="分享到Twitter" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="twitter" href="#"></a>
-					<a class="social-share-button-google_plus" title="分享到Google+" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="google_plus" href="#"></a>
-					<a class="social-share-button-weibo" title="分享到新浪微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="weibo" href="#"></a>
-					<a class="social-share-button-tqq" title="分享到腾讯微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="tqq" href="#"></a>
-				</div>
+
 			</div>
 			<div class="content">
 				<p class="cn">
-					旅行定制是为爱好旅行且注重旅行品质的新阶层设计充满个性、独具魅力的旅行经历。高雅而不高调的生活品味、内敛而非喧哗的生活态度，低调而奢华的生活体验是新阶层所推崇的格调生活方式。
-					<br />
+					旅行定制是为爱好旅行且注重旅行品质的新阶层设计充满个性、独具魅力的旅行经历。高雅而不高调的生活品味、内敛而非喧哗的生活态度，低调而奢华的生活体验是新阶层所推崇的格调生活方式。<br />
 					朋贝旅行设计师融合新阶层格调生活元素，致力以全球私享的旅行资源为新阶层的您雕琢专属的旅行经历与记忆。时间让一切黯然失色，唯记忆独享光辉。
 				</p>
 				<p class="en">
 					<b>P.B. travel tailor</b> is offering quality holidays to stylish nature lover, elegant and not high profile, reserved and not strident. <br />
-					<b>P.B. travel designer</b> dedicate to the global private tourism resources, elaborate itinerary for you. Time eclipse everything, but its memory glorious forever. <br />
-					As a discerning traveler, you’ll appreciate that <b>P.B. Tailored Travel</b> doesn’t compromise on high quality standards, unique personal style & philosophy, friendly hosting and professional guiding.<br />
-					You’ll travel in a small group, consisting only of you and perhaps two of your traveling friends, which is your guarantee of a personal and private tour, up to a maximum of 10 peoples, NO large tourist buses here!<br />
-					<b>P.B. Tailored Travel</b> offers its guests Security, Quality, Trustworthiness, Safety, and Friendliness<br />
-					You always said that you'd start your travel sometime - well, there is <b>no best time than now!</b>
+					<b>P.B. travel designer</b> dedicate to the global private tourism resources, elaborate itinerary for you. Time eclipse everything, but its memory glorious forever.
 				</p>
+				<div class="social-share-button" data-url="http://www.pbtourist.com" data-img="http://42.96.146.235/asset/images/slider01.jpg" data-title="定制你的旅行梦想，保存你的光辉记忆|朋贝旅行俱乐部PBtourist">
+					<a class="icon social-share-button-google_plus" title="分享到Google+" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="google" href="#"></a>
+					<a class="msg google-c"></a>
+					<a class="icon social-share-button-facebook" title="分享到Facebook" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="facebook" href="#"></a>
+					<a class="msg facebook-c"></a>
+					<a class="icon social-share-button-twitter" title="分享到Twitter" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="twitter" href="#"></a>
+					<a class="msg twitter-c"></a>
+					<a class="icon social-share-button-weibo" title="分享到新浪微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="weibo" href="#"></a>
+					<a class="msg weibo-c"></a>
+					<a class="icon social-share-button-tqq" title="分享到腾讯微博" rel="nofollow " onclick="return SocialShareButton.share(this);" data-site="tqq" href="#"></a>
+					<a class="msg tqq-c"></a>
+					<a class="icon mail-to-us" title="给我们发邮件" onclick=""></a>
+					<a class="msg email-c"></a>
+				</div>
+				<div class="footer">
+					<ul>
+						<li class="or">
+							<img src="asset/images/or.png" alt="">
+						</li>
+						<li class="phone">
+							<img src="asset/images/phone.png" alt="">
+						</li>
+						<li class="number">
+							4009991206
+						</li>
+					</ul>
+				</div>
 			</div>
+
 		</div>
 
 
-		<div id="belttipr"><img src="asset/images/belttip-r.png" /></div>
+
+
+
+		<div id="belttipr"><img src="asset/images/favtip24.png" /></div>
 		<div id="belttipl"><img src="asset/images/belttip-l.png" /></div>
 
 		<div id="myCarousel" class="carousel slide">
 		    <!-- Carousel items -->
 		    <div class="carousel-inner">
-				<div class="active item"><img alt="" src="asset/images/slider01.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider02.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider03.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider04.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider05.jpg" /></div>
+				<div class="active item"><img alt="" src="asset/images/slider/s01l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s02l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s03l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s04l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s05l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s06l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s07l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s08l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s09l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s10l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s11l.jpg" /></div>
+				<div class="item"><img alt="" src="asset/images/slider/s12l.jpg" /></div>
 		    </div>
 		    <!-- Carousel nav -->
 		    <a class="carousel-control left" href="#myCarousel" data-slide="next">&lsaquo;</a>
@@ -169,14 +206,48 @@ var isMozilla=browser.mozilla;
 var isIE6=isIE&&browserVer<7;
 var agent=navigator.userAgent.toLowerCase();
 var bMobile=agent.indexOf('mobile')>-1,bIOS=/\b(iphone|ipad)\b/i.test(agent);
+var server = "http://42.96.146.235:3000" // 192.168.86.128:3000   42.96.146.235:3000
+
+
+function update_share(name,str){
+	$("a."+name+"-c").text(str);
+}
+function get_share(){
+	$.getJSON(server + '/api/get_share?callback=?',function(data){
+		share = data[0];
+		$.each(share,function(k,v){
+			update_share(k,v);
+		})
+	})
+}
+
 
 jQuery(function($){
 	if(isIE6){
 		$("#mask").show(); $(".ie6-alert").show();
 	}
+	get_share();
 	var $username = $("input[name=username]"),$email = $("input[name=email]");
+	// var server = "http://192.168.86.128:3000" // 192.168.86.128:3000   42.96.146.235:3000
+	if(isIE){
+		var s1 = "NAME | 姓名";
+		var s2 = "EMAIL | 电邮";
+		$username.val(s1); $email.val(s2);
+		$.each([$username,$email],function(index,item){
+			item.focus(function(){
+				if(item.val()==s1 && index == 0 || item.val()==s2 && index == 1)item.val("");
+			}).blur(function(){
+				if(item.val()==""){
+					if(index == 0)item.val(s1);
+					if(index == 1)item.val(s2);
+				}
+
+			})
+		})
+	}
 	setInterval(function(){$("#myCarousel").find("a.right").click();},5000)
 	$("input[name=email],input[name=username]").focus(function(){$('.alert-error').fadeOut();})
+
 
 	$("li.sbt").click(function(){
 		var username = $("input[name=username]").val();
@@ -184,7 +255,7 @@ jQuery(function($){
 		//$('li.sbt').hide();
 		$('li.sbt').css("background-position","0px -64px")
 		//42.96.146.235:3000
-		$.getJSON('http://42.96.146.235:3000/api/come_soon_submit?callback=?&username=' + username + '&email=' + email,function(data){
+		$.getJSON(server + '/api/come_soon_submit?callback=?&username=' + username + '&email=' + email,function(data){
 			$('.sbtm-tip').remove();
 			$('li.sbt').css("background-position","0 0")
 			var tip;
@@ -216,6 +287,15 @@ jQuery(function($){
 	    if (url.length === 0) {
 	      url = encodeURIComponent(location.href);
 	    }
+
+	    setTimeout(function(){
+			$.getJSON(server + '/api/sns_share?callback=?&name=' + site,function(data){
+				obj = data[0];
+				if(obj.status == "1")update_share(obj.name,obj.times);
+			})
+	    },1000)
+
+
 	    switch (site) {
 	      case "weibo":
 	        SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=" + url + "&type=3&pic=" + img + "&title=" + title);
@@ -244,7 +324,7 @@ jQuery(function($){
 	      case "renren":
 	        SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=" + url + "&title=" + title + "&description=");
 	        break;
-	      case "google_plus":
+	      case "google":
 	        SocialShareButton.openUrl("https://plus.google.com/share?url=" + url + "&t=" + title);
 	        break;
 	      case "google_bookmark":
