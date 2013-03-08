@@ -7,11 +7,11 @@
 <meta name="keywords" content="旅游 旅行 定制旅游 tourist" />
 <meta name="description" content="旅游在线定制" />
 <meta name="author" content="tourist" />
-<title>TOURIST COMESOON</title>
+<title>PBTOURIST</title>
 <link rel="icon" href="asset/ico/favicon.ico"/>
-<link type="text/css" rel="stylesheet" href="asset/stylesheets/bootstrap.min.css" />
+<!-- <link type="text/css" rel="stylesheet" href="asset/stylesheets/bootstrap.min.css" /> -->
 <script type="text/javascript" src="asset/javascripts/jquery.js"></script>
-<script type="text/javascript" src="asset/javascripts/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="asset/javascripts/bootstrap.min.js"></script> -->
 
 <style>
 	body{font:12px/1.6 Arial, Helvetica, sans-serif, '微软雅黑','宋体','黑体';}
@@ -20,28 +20,30 @@
 	textarea{resize:none;}
 	a{text-decoration:none; color:#1b6fb7;}
 	a:hover{text-decoration:underline;}
-	.title, .word, .area{float:left;}
-	.container{background:url(asset/images/backn.png) no-repeat;width:980px;height:850px;margin:0 auto;margin-top:16px;position:relative;}
-	#myCarousel{position:absolute;top:103px;left:106px;width:769px;height:270px;}
-	.alert-error{display:none;background-color:#eee;border-color:#a00;position:absolute;width:680px;height:20px;top:420px;left:120px;z-index:1000;}
-	#belttipl{position:absolute;top:4px;left:7px;width:228px;height:196px;z-index:100;}
-	#belttipr{position:absolute;top:332px;left:763px;width:212px;height:215;z-index:100;}
+
+	.container{background:url(asset/images/backn.png) no-repeat;width:980px;height:850px;margin:16px auto;margin-top:16px;position:relative;}
+
+	.alert-error{display:none;background-color:#eee; border: 1px solid #B94A48; position:absolute;width:680px;height:20px;top:420px;left:120px;z-index:1000; color:#B94A48;  border-radius: 4px 4px 4px 4px;   margin-bottom: 20px;   padding: 8px 35px 8px 14px;
+	    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);}
+
+	#belttipl{position:absolute;top:4px;left:7px;width:228px;height:196px;z-index:200;}
+	#belttipr{position:absolute;top:332px;left:763px;width:212px;height:215;z-index:200;}
 	.ie6-alert{display:none;position:absolute;top:-30px;width:560px;padding:48px;;z-index:500;background-color:white;border-color:#eee;left:170px;top:120px;border-radius:12px;}
 	#mask{display:none;position:absolute;top:0px;left:0px;width:100%;height:100%;background-color:#000;z-index:400;opacity:0.4;filter:alpha(opacity=40)}
 
 
-	.title { background: url(asset/images/pb.png) no-repeat scroll top left; height:50px; padding: 20px 69px; font: italic 30px/30px Georgia,Cambria,Arial; color:rgb(153,153,153); margin-top:30px; margin-left:550px; word-spacing: 7px; }
-	ul.list { list-style: none; display:block; clear:both; margin-left:85px;margin-top:459px;*margin-top:340px;overflow: hidden;}
+	.title { background: url(asset/images/pb.png) no-repeat scroll 0 30px; padding: 49px 69px; font: italic 30px/30px Georgia,Cambria,Arial; color:rgb(153,153,153); margin-top:0; margin-left:550px; word-spacing: 7px; }
+	ul.list { list-style: none; margin-left:45px;margin-top:330px;*margin-top:340px;overflow: hidden;}
 	ul.list>li { display: inline-block; *display:inline; zoom:1; position:relative;}
-	li.desc>h2 { font: bold 14px/18px '微软雅黑';color:#666; }
-	li.desc>h4 { font: bold italic 12px/12px Constantia,Arial ;color:#909090;}
+	li.desc>h2 { font: bold 14px/14px '微软雅黑';color:#666; }
+	li.desc>h4 { font: bold italic 12px/12px Constantia,Arial ;color:#909090;margin:0;}
 
 	li.un { margin-left:20px; background: url(asset/images/un.png) no-repeat top left; width:172px;height:33px;overflow:hidden;zoom:1;}
 	li.email { margin-left:14px; background: url(asset/images/email.png) no-repeat top left; width:192px;height:33px; overflow:hidden;zoom:1;}
-	li.sbt { margin-left:14px; background:url(asset/images/sbtn-c.jpg) no-repeat top left; width:64px; height:32px; }
+	li.sbt { margin-left:14px; background:url(asset/images/sbtn-c.jpg) no-repeat top left; width:64px; height:32px; z-index:250;}
 	li.sbt:hover { background:url(asset/images/sbtn-c.jpg) no-repeat 0 -32px; cursor:pointer}
-	li.un>input,li.email>input {display:block;background:none;border:0px;color:none;box-shadow:none;width:110px;margin-left:40px; margin-top:3px;font-size:14px;color:#999;font-weight:bold; position: absolute; top:0;left:0;}
-	li.email>input { margin-left:45px ; width:126px; }
+	li.un>input,li.email>input {display:block;background:none;border:0px;color:none;box-shadow:none;width:110px;margin-left:48px; margin-top:7px;font-size:14px;color:#999;font-weight:bold; position: absolute; top:0;left:0;}
+	li.email>input { margin-left:52px ; width:126px; }
 	li.un ,li.email,li.sbt {*padding-bottom:10px;}
 	li.sbt {*height:22px;margin-bottom: 1px;*margin-bottom:14px;}
 	
@@ -70,15 +72,73 @@
 	.social-share-button-tqq         { background-position:  0 -84px;}
 	.mail-to-us                      { background-position:  0 -105px; }
 	.content {}
-	.content>p.cn { font: 12px/20px "幼圆","微软雅黑"; color:#666; word-spacing: 1px; letter-spacing: 1px;}
+	.content>p.cn { font: 12px/20px "幼圆","微软雅黑"; color:#666; word-spacing: 1px; letter-spacing: 1px; margin-top:0;}
 	.content>p.en { font: italic 14px/1.7em Georgia,Arial,Verdana,"Century Gothic",Helvetica,Arial; color:#555; word-break:break-all; word-wrap:break-word;word-spacing: 1px; *word-spacing: 0px; padding-bottom:16px;border-bottom:1px solid #aaa;}
 	.content>p.en b { color:#333; }
 
-	.footer {  margin:0 auto; text-align: center; margin-top:-10px; overflow: hidden;}
-	.footer ul { list-style-type: none; }
+	.footer {  margin-top:-11px; overflow: hidden; padding-left:200px; width:205px;}
+	.footer ul { list-style-type: none; margin-top:0; margin-left:0;}
 	.footer ul>li { display: inline-block; *display:inline; overflow: hidden; }
 	li.phone {margin-bottom:4px;}
 	li.number { font: bold 18px/24px Arial; color:grey; margin-bottom:2px; padding-left:8px;}
+
+
+	.slider{ position:absolute;top:103px;left:106px;width:769px;height:270px; }
+	.slider>.sbox{width:769px;height:270px; position: relative; overflow: hidden; cursor:pointer;}
+	.sbox>img { display: inline-block; position: absolute; visibility: hidden;}
+
+
+	.modal {
+	    background-clip: padding-box;
+	    background-color: #FFFFFF;
+	    border: 1px solid rgba(0, 0, 0, 0.3);
+	    border-radius: 6px 6px 6px 6px;
+	    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	    left: 220px;
+	    outline: medium none;
+	    position: absolute;
+	    top: -20%;
+	    width: 560px;
+	    z-index: 1050;
+	}
+
+
+	.modal-header {
+	    border-bottom: 1px solid #EEEEEE;
+	    padding: 9px 15px;	
+	}
+
+	.modal-header>h2,.modal-header>h3{
+		display:inline-block; margin:0;
+	}
+	.modal-header>h3{
+		font-size: 24.5px;
+	}
+
+	.modal-header>h2{
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; float:right;  cursor: pointer;
+		color: #000000;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 20px;
+		opacity: 0.2;
+		text-shadow: 0 1px 0 #FFFFFF;
+		margin-top: 2px;
+	}
+
+	.modal-body {
+		max-height: 400px;
+		overflow-y: auto;
+		padding: 15px;
+		position: relative;
+	}
+
+	.modal-body > p {
+		margin:0;
+	}
+
+	.momask {position: absolute; top:0;left:0; width: 100%; height:900px; z-index:1000; opacity:0.8;filter:alpha(opacity=80);background-color: black; display: none;}
+
 </style>
 
 </head>
@@ -147,32 +207,28 @@
 
 
 
-		<div id="belttipr"><img src="asset/images/favtip24.png" /></div>
+		<div id="belttipr"><img src="asset/images/favtip24.png" width="209" height="158"/></div>
 		<div id="belttipl"><img src="asset/images/belttip-l.png" /></div>
 
-		<div id="myCarousel" class="carousel slide">
-		    <!-- Carousel items -->
-		    <div class="carousel-inner">
-				<div class="active item"><img alt="" src="asset/images/slider/s01l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s02l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s03l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s04l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s05l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s06l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s07l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s08l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s09l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s10l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s11l.jpg" /></div>
-				<div class="item"><img alt="" src="asset/images/slider/s12l.jpg" /></div>
-		    </div>
-		    <!-- Carousel nav -->
-		    <a class="carousel-control left" href="#myCarousel" data-slide="next">&lsaquo;</a>
-		    <a class="carousel-control right" href="#myCarousel" data-slide="prev">&rsaquo;</a>
-	    </div>
+		<div class="slider">
+			<div class="sbox">
+			<img src="asset/images/slider/s01l.jpg" alt="" width="769" height="270" style="visibility:visible;" />
+			<img src="asset/images/slider/s02l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s03l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s04l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s05l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s06l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s07l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s08l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s09l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s10l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s11l.jpg" alt="" width="769" height="270" />
+			<img src="asset/images/slider/s12l.jpg" alt="" width="769" height="270" />
+			</div>
+		</div>
+
+
 		<div class="alert alert-error">
-			<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
-			<!-- <strong cless="err">Error!</strong>  -->
 		</div>
 
 		<div id="mask"></div>
@@ -185,17 +241,20 @@
 		  <br />
 		</div>
 
+	    <div class="modal" id="myModal">
+		    <div class="modal-header">
+		    	<h3>PBTOURIST</h3>
+		    	<h2 class="close">&times;</h2>
+		    </div>
+		    <div class="modal-body">
+		    	<p>congratulations, sending successful !</p>
+		    </div>
+	    </div>
+
 	</div>
 
-    <div class="modal hide fade" id="myModal">
-	    <div class="modal-header">
-	   	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	    <h3>PBTOURIST</h3>
-	    </div>
-	    <div class="modal-body">
-	    <p>congratulations, sending successful !</p>
-	    </div>
-    </div>
+	<div class="momask"></div>
+
 
 
 <script type="text/javascript">
@@ -207,6 +266,26 @@ var isIE6=isIE&&browserVer<7;
 var agent=navigator.userAgent.toLowerCase();
 var bMobile=agent.indexOf('mobile')>-1,bIOS=/\b(iphone|ipad)\b/i.test(agent);
 var server = "http://42.96.146.235:3000" // 192.168.86.128:3000   42.96.146.235:3000
+
+// SLIDER
+var t;
+function runSlider(){
+	clearTimeout(t);
+	arr = $(".sbox img");
+	arr.each(function(){
+		$(this).attr("visiblity","hidden");
+	})
+	obj = $(arr).eq(0);
+	obj1 = $(arr).eq(1);
+	obj.css("visibility","visible").css({"left":"0px","zIndex":"100"}).animate({left:'-769px'});
+	obj1.css("visibility","visible").css({"left":"769px","zIndex":"100"}).animate({left:'0px'},function(){
+		$(".sbox").append(obj.css({"left":"0","zIndex":"-100"}).remove());
+		t = setTimeout(function(){
+			runSlider();
+		},3000)
+	});
+}
+
 
 
 function update_share(name,str){
@@ -226,7 +305,30 @@ jQuery(function($){
 	if(isIE6){
 		$("#mask").show(); $(".ie6-alert").show();
 	}
+
 	get_share();
+
+	// run slider
+	$(".sbox").click(function(){
+		arr = $(".sbox img");
+		obj = $(arr).eq(0);
+		obj1 = $(arr).eq(1);
+		if(! obj.is(":animated") || obj1.is(":animated") ){
+			runSlider();
+		}
+	});
+
+	$("h2.close").click(function(){
+		$('.modal').animate({top:'-15%'},function(){
+			$('.momask').hide();
+			$(this).hide();
+		})
+	})
+
+	t = setTimeout(function(){
+	 	runSlider();
+	 },3000);
+
 	var $username = $("input[name=username]"),$email = $("input[name=email]");
 	// var server = "http://192.168.86.128:3000" // 192.168.86.128:3000   42.96.146.235:3000
 	if(isIE){
@@ -245,8 +347,9 @@ jQuery(function($){
 			})
 		})
 	}
-	setInterval(function(){$("#myCarousel").find("a.right").click();},5000)
+	// setInterval(function(){$("#myCarousel").find("a.right").click();},5000)
 	$("input[name=email],input[name=username]").focus(function(){$('.alert-error').fadeOut();})
+
 
 
 	$("li.sbt").click(function(){
@@ -264,7 +367,8 @@ jQuery(function($){
 				$('.alert-error').fadeOut();
 				$email.val("");
 				$username.val("");
-				$('.modal').modal('show');
+				$('.momask').show();
+				$('.modal').show().animate({top:"10%"});
 			}else{
 				$('.errtip').remove();
 				$('.alert-error').append("<span class='errtip'>" + data[0].err + "</span>").fadeIn();
