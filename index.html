@@ -4,7 +4,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<meta name="keywords" content="旅游 旅行 定制旅游 tourist" />
+<meta name="keywords" content="旅游 旅行 旅行定制" />
 <meta name="description" content="旅游在线定制" />
 <meta name="author" content="tourist" />
 <title>PBTOURIST</title>
@@ -117,12 +117,15 @@
 	.modal-header>h2{
 		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; float:right;  cursor: pointer;
 		color: #000000;
+		color: #aaa\0;
 		font-size: 20px;
 		font-weight: bold;
 		line-height: 20px;
 		opacity: 0.2;
 		text-shadow: 0 1px 0 #FFFFFF;
 		margin-top: 2px;
+		*margin-top: -31px;
+		*color:#aaa;
 	}
 
 	.modal-body {
@@ -141,7 +144,7 @@
 </style>
 
 </head>
-<body>
+<body onResize="modal_center()">
 	<div class="container">
 		<div class="title">IS COMING SOON</div>
 		<ul class="list">
@@ -239,20 +242,18 @@
 		  <a href="http://www.google.com/chrome"><img src="asset/images/opera-logo.png" /></a>
 		  <br />
 		</div>
-
-	    <div class="modal" id="myModal">
-		    <div class="modal-header">
-		    	<h3>PBTOURIST</h3>
-		    	<h2 class="close">&times;</h2>
-		    </div>
-		    <div class="modal-body">
-		    	<p>congratulations, sending successful !</p>
-		    </div>
-	    </div>
-
 	</div>
 
 	<div class="momask"></div>
+    <div class="modal" id="myModal">
+	    <div class="modal-header">
+	    	<h3>PBTOURIST</h3>
+	    	<h2 class="close">&times;</h2>
+	    </div>
+	    <div class="modal-body">
+	    	<p>congratulations, sending successful !</p>
+	    </div>
+    </div>
 
 
 
@@ -297,6 +298,10 @@ function get_share(){
 			update_share(k,v);
 		})
 	})
+}
+
+function modal_center(){
+	$('.modal').css('left',document.body.clientWidth/2-280);
 }
 
 
@@ -349,6 +354,7 @@ jQuery(function($){
 	// setInterval(function(){$("#myCarousel").find("a.right").click();},5000)
 	$("input[name=email],input[name=username]").focus(function(){$('.alert-error').fadeOut();})
 
+	modal_center();
 
 
 	$("li.sbt").click(function(){
